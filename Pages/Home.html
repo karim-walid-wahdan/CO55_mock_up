@@ -16,9 +16,10 @@
     />
     <link rel="stylesheet" href="../Custom_Styles/dist/custom.css" />
   </head>
-
   <body>
-    <!-- Navbar -->
+    <!------------------------------------------------------------------
+    ---------------------------START NavBar-----------------------------
+    ------------------------------------------------------------------->
     <nav class="navbar navbar-expand-md navbar-dark bg-opacity-90 fixed-top">
       <div class="container p-md-0">
         <a class="navbar-brand" href="Home.html">
@@ -78,14 +79,21 @@
                 />
                 Log In
               </button>
-              <a class="btn btn-primary d-sm-none d-block" href="BookNow.html"
-                >BookNow</a
-              >
+              <a class="btn btn-primary d-sm-none d-block" href=""
+                >Book A view
+              </a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+    <!------------------------------------------------------------------
+    ---------------------------END NavBar-----------------------------
+    ------------------------------------------------------------------->
+
+    <!------------------------------------------------------------------
+    ---------------------------START ChatBox-----------------------------
+    ------------------------------------------------------------------->
     <div class="container chatbox-container">
       <button class="btn bg-white chat-button">
         <img class="icon" src="../Assets/Icons/chat.svg" />
@@ -94,6 +102,12 @@
         <h4>Chat Box</h4>
       </div>
     </div>
+    <!------------------------------------------------------------------
+    ---------------------------END ChatBox-----------------------------
+    ------------------------------------------------------------------->
+    <!------------------------------------------------------------------
+    ---------------------------START Carsouel---------------------------
+    ------------------------------------------------------------------->
     <div class="w-100 pt-0 pb-2">
       <div class="entry-carousel w-100 vh-100">
         <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -120,33 +134,58 @@
         </div>
       </div>
     </div>
-
-    <div class="services container mt-5 mp-5">
-      <div class="title container justify-content-center">
-        <div class="row justify-content-center pt-4">
-          <div class="col-md-5 col-9">
+    <!------------------------------------------------------------------
+    ---------------------------END Carsouel-----------------------------
+    ------------------------------------------------------------------->
+    <!------------------------------------------------------------------
+    ---------------------------START Services---------------------------
+    ------------------------------------------------------------------->
+    <div class="services container mt-md-5 mt-4 mp-5">
+      <div class="title container justify-content-center pb-0 mb-0">
+        <div class="row d-flex justify-content-center">
+          <div class="col-7 fw-bolder display-5 text-center">
+            <p class="">
+              <span class="text-primary">CO-55</span>
+              <span>Services</span>
+            </p>
+          </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+          <div class="col-8 text-center">
             <img
-              class="img-fluid img-fluid"
-              src="../Assets/Icons/Group 8184.svg"
+              class="img-fluid img-fluid d-md-block d-none"
+              width="50%"
+              src="../Assets/Icons/Union 11.svg"
+            />
+          </div>
+          <div class="col-8 text-center">
+            <img
+              class="img-fluid img-fluid d-md-none d-block"
+              width="100%"
+              src="../Assets/Icons/Union 11.svg"
             />
           </div>
         </div>
       </div>
     </div>
-
+    <!------------------------------------------------------------------
+    ---------------------------END Services---------------------------
+    ------------------------------------------------------------------->
+    <!------------------------------------------------------------------
+    ---------------------------START QuickInfo--------------------------
+    ------------------------------------------------------------------->
     <div class="w-100">
-      <div class="quickinfo container-fluid mt-5 mp-5">
+      <div class="quickinfo container-fluid mt-4 mt-md-5 mp-5">
         <div class="container p-0 pt-5">
           <div class="quickinfo-row row justify-content-center p-0 pt-5"></div>
         </div>
       </div>
     </div>
-
     <div class="w-100">
       <div class="container-fluid mt-5 mp-5">
         <div class="title container justify-content-center pb-0 mb-0">
           <div class="row d-flex justify-content-center">
-            <div class="col-7 fw-bolder display-1 text-center">
+            <div class="col-7 fw-bolder display-5 text-center">
               <p class="">
                 <span class="text-primary">CO-55</span>
                 <span>Amenities</span>
@@ -156,8 +195,15 @@
           <div class="row d-flex justify-content-center">
             <div class="col-8 text-center">
               <img
-                class="img-fluid img-fluid w"
-                width="75%"
+                class="img-fluid img-fluid d-md-block d-none"
+                width="50%"
+                src="../Assets/Icons/Union 11.svg"
+              />
+            </div>
+            <div class="col-8 text-center">
+              <img
+                class="img-fluid img-fluid d-md-none d-block"
+                width="100%"
                 src="../Assets/Icons/Union 11.svg"
               />
             </div>
@@ -169,12 +215,17 @@
         <div class="container amenities p-0"></div>
       </div>
     </div>
-
+    <!------------------------------------------------------------------
+    ---------------------------END QuickInfo---------------------------
+    ------------------------------------------------------------------->
+    <!------------------------------------------------------------------
+    ---------------------------START Testimonials-----------------------
+    ------------------------------------------------------------------->
     <div class="w-100">
       <div class="container-fluid bg-transparent mt-5">
         <div class="title container justify-content-center">
           <div class="row d-flex justify-content-center p-0">
-            <div class="col-9 fw-bolder display-1 text-center p-0">
+            <div class="col-9 fw-bolder display-5 text-center p-0">
               <p>
                 <span class="text-primary">CO-55</span>
                 <span>Testimonials</span>
@@ -184,8 +235,15 @@
           <div class="row d-flex justify-content-center">
             <div class="col-8 text-center">
               <img
-                class="img-fluid img-fluid w"
-                width="75%"
+                class="img-fluid img-fluid d-md-block d-none"
+                width="50%"
+                src="../Assets/Icons/Union 11.svg"
+              />
+            </div>
+            <div class="col-8 text-center">
+              <img
+                class="img-fluid img-fluid d-md-none d-block"
+                width="100%"
                 src="../Assets/Icons/Union 11.svg"
               />
             </div>
@@ -200,7 +258,12 @@
         ></div>
       </div>
     </div>
-
+    <!------------------------------------------------------------------
+    ---------------------------END Testimonials-------------------------
+    ------------------------------------------------------------------->
+    <!------------------------------------------------------------------
+    ---------------------------START Footer-----------------------------
+    ------------------------------------------------------------------->
     <div class="w-100">
       <div class="container-fluid footer">
         <div class="container footer-content">
@@ -216,34 +279,38 @@
             <div
               class="col-md-3 col-12 text-white col-6 px-0 order-2 mt-md-0 mt-2"
             >
-              <p class="text-capitalize text-md-left text-center">Locations</p>
-              <div class="d-md-block d-flex justify-content-center">
-                <p class="text-capitalize mb-1 text-white">
+              <p class="text-capitalize text-md-left text-md-start text-center">
+                Locations
+              </p>
+              <div class="d-block justify-content-center">
+                <p
+                  class="text-capitalize mb-1 text-white text-md-start text-center"
+                >
                   Nasr City<a
                     class="ml-1 blue-color text-decoration-none"
                     style="text-decoration: underline"
                     href=""
-                    >view on map</a
+                  >
+                    view on map</a
                   >
                 </p>
-                <p class="text-capitalize mb-1 text-white">
+                <p
+                  class="text-capitalize mb-1 text-white text-md-start text-center"
+                >
                   New Cairo<a
                     class="ml-1 blue-color text-decoration-none"
                     style="text-decoration: underline"
                     href=""
-                    >view on map</a
+                  >
+                    view on map</a
                   >
                 </p>
               </div>
             </div>
 
             <div class="col-md-3 col-12 text-center text-white col-6 order-3">
-              <p class="text-capitalize">
-                <a href="" class="text-white">FAQs</a>
-              </p>
-              <p class="text-capitalize">
-                <a href="" class="text-white"> Careers </a>
-              </p>
+              <p class="text-capitalize text-white">FAQs</p>
+              <p class="text-capitalize text-white">Careers</p>
             </div>
             <div class="col-md-3 col-12 text-center text-white col-6 order-4">
               <p class="text-capitalize">
@@ -254,14 +321,14 @@
             </div>
           </div>
 
-          <div class="row mt-5 justify-content-between">
-            <div class="col-3 text-white order-1">
-              <p class="text-left">
+          <div class="row mt-md-5 mt-3 justify-content-between mb-0">
+            <div class="col-md-3 col-12 text-white order-1">
+              <p class="text-md-start text-center">
                 Copyright ©2021 All rights reserved.
                 <a href="https://intcore.com" target="_blank">intcore.</a>
               </p>
             </div>
-            <div class="col-3 text-white order-2 px-2 text-center">
+            <div class="col-md-3 col-12 text-white order-2 px-2 text-center mb-4">
               <a target="_blank" href=""
                 ><img
                   src="../Assets/Icons/Icon awesome-facebook.svg"
@@ -285,10 +352,10 @@
             </div>
 
             <div
-              class="col-4 text-right order-3 text-white"
+              class="col-md-4 col-12text-right order-3 text-white text-center"
               style="overflow: hidden"
             >
-              <div class="">
+              <div class="mb-md-2 mb-4">
                 <img
                   src="../Assets/Icons/Icon metro-mobile.svg"
                   class="img-fluid"
@@ -313,11 +380,13 @@
         </div>
       </div>
     </div>
+    <!------------------------------------------------------------------
+    ---------------------------END Footer-------------------------------
+    ------------------------------------------------------------------->
     <script src="../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="../node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
-
     <script>
       var currentURI = window.location.pathname;
       var currentPath = currentURI.substring(currentURI.lastIndexOf("/") + 1);
@@ -547,9 +616,9 @@
           image:
             "http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg",
           shortTestimonial:
-            "CO-55 is one of the best things anyone can start a business with..",
+            "CO-55 is one of the best things anyone can START a business with..",
           longTestimonial:
-            "Real partners that are more than keen to help to maintain our image before theirs, our success and our development as a part of theirs.. Thanks for being a thrust to every success story that starts at your place",
+            "Real partners that are more than keen to help to maintain our image before theirs, our success and our development as a part of theirs.. Thanks for being a thrust to every success story that STARTs at your place",
         },
         // More testimonials...
       ];
@@ -569,10 +638,10 @@
                               } order-1">
                                   <div class="card h-100 border-0 bg-transparent">
                                       <div class="card-body">
-                                          <h1 class="card-title fw-bold pb-0 mb-md-4 mb-2">${
+                                          <h3 class="card-title fw-bold pb-2 mb-md-4 mb-2">${
                                             board.title
                                           }
-                                          <img src="../Assets/Icons/Union 12.svg" class="card-img-top img-fluid mt-0 icon-size" alt="Line Image" /></h1>
+                                          <img src="../Assets/Icons/Union 12.svg" class="card-img-top img-fluid mt-0 " alt="Line Image" /></h3>
                                           <p class="card-text bg-transparent">${
                                             board.description
                                           }</p>
@@ -581,7 +650,7 @@
                                         ${board.buttons
                                           .map(
                                             (button) =>
-                                              `<button class="btn btn-secondary w-100 m-0 rounded-0 mb-3 d-flex flex-column align-items-center justify-content-center align-items-center">
+                                              `<button style="background-color: rgba(203, 213, 224, 0.3);" class="btn  w-100 m-0 rounded-0 mb-3 d-flex flex-column align-items-center justify-content-center align-items-center">
                                                         <div class="d-flex justify-content-evenly w-100 pb-2 align-items-center">
                                                             ${button.icons
                                                               .map(
@@ -629,7 +698,7 @@
               <img src="${card.imageSrc}" class="card-img-top rounded-0" alt="..." />
               <div class="card-body">
                 <h1 class="fs-5 fw-bolder text-white">${card.title}</h1>
-                <img src="${card.iconSrc}" class="img-fluid w-75" alt="..." />
+                <img src="${card.iconSrc}" class="img-fluid w-75 mb-4" alt="..." />
                 <p class="fw-lighter">${card.text}</p>
               </div>
             </div>
@@ -683,13 +752,13 @@
         alt="${slide.altText}"
       />
       <div class="card position-absolute card-style">
-        <div class="card-body border-bottom border-white mx-2 pe-0">
+        <div class="card-body border-bottom border-white mx-2 pe-0 border-bottom">
           <h1 class="fw-bolder">
             ${slide.title}
           </h1>
         </div>
         <div class="card-footer pt-0">
-          <a class="btn border-0 text-white d-md-block d-none" href="BookNow.html">Book A View</a>
+          <a class="btn border-0 text-white d-md-block d-none my-2" href="BookNow.html">Book A View</a>
         </div>
       </div>
     </div>
@@ -725,10 +794,10 @@
             From ${testimonial.company}
           </p>
           <p class="fs-6 fw-lighter text-black-50">-Company name-</p>
-          <p class="text-start fs-5 mt-5">
+          <p class="text-START fs-5 mt-5">
             ${testimonial.shortTestimonial}
           </p>
-          <p class="text-start fs-5 text-black-50">
+          <p class="text-START fs-5 text-black-50">
             ${testimonial.longTestimonial}
           </p>
         </div>

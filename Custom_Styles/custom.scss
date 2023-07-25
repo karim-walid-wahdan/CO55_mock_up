@@ -10,7 +10,6 @@ $body-bg: #f8f9fa;
 $body-color: #212529;
 $primary: #00a4cf;
 $font-family-base: "Visby CF", sans-serif;
-
 .bg-opacity-90 {
     background-color: rgba($color: #0b0e14, $alpha: 0.97);
 }
@@ -244,13 +243,14 @@ $font-family-base: "Visby CF", sans-serif;
                 }
             }
             .item {
-                opacity: 0.2;
+                opacity: 1;
                 margin-bottom: 80px;
-                transform: scale3d(0.8, 0.8, 1);
+                transform: scale3d(0.6, 0.6, 1);
                 transition: all 0.3s ease-in-out;
             }
         }
         &.active.center .item {
+            transform: scale3d(0.8, 0.8, 1);
             opacity: 1;
         }
     }
