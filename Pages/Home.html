@@ -151,9 +151,9 @@
           </div>
         </div>
         <div class="row d-flex justify-content-center">
-          <div class="col-8 text-center">
+          <div class="col-8 text-center d-flex justify-content-center">
             <img
-              class="img-fluid img-fluid d-md-block d-none"
+              class="img-fluid d-md-block d-none"
               width="50%"
               src="../Assets/Icons/Union 11.svg"
             />
@@ -193,9 +193,9 @@
             </div>
           </div>
           <div class="row d-flex justify-content-center">
-            <div class="col-8 text-center">
+            <div class="col-8 text-center d-flex justify-content-center">
               <img
-                class="img-fluid img-fluid d-md-block d-none"
+                class="img-fluid d-md-block d-none"
                 width="50%"
                 src="../Assets/Icons/Union 11.svg"
               />
@@ -221,7 +221,7 @@
     <!------------------------------------------------------------------
     ---------------------------START Testimonials-----------------------
     ------------------------------------------------------------------->
-    <div class="w-100">
+    <div class="w-100 mb-5">
       <div class="container-fluid bg-transparent mt-5">
         <div class="title container justify-content-center">
           <div class="row d-flex justify-content-center p-0">
@@ -233,9 +233,9 @@
             </div>
           </div>
           <div class="row d-flex justify-content-center">
-            <div class="col-8 text-center">
+            <div class="col-8 text-center d-flex justify-content-center">
               <img
-                class="img-fluid img-fluid d-md-block d-none"
+                class="img-fluid d-md-block d-none"
                 width="50%"
                 src="../Assets/Icons/Union 11.svg"
               />
@@ -252,10 +252,14 @@
             class="row d-flex amenities-container justify-content-center align-items-center mt-5"
           ></div>
         </div>
-        <div
-          id="customers-testimonials"
-          class="owl-carousel p-0 bg-transparent border-0"
-        ></div>
+        <div class="row d-flex justify-content-center">
+          <div class="col-10 d-flex mb-5">
+            <div
+              id="customers-testimonials"
+              class="owl-carousel p-0 bg-transparent border-0"
+            ></div>
+          </div>
+        </div>
       </div>
     </div>
     <!------------------------------------------------------------------
@@ -328,7 +332,9 @@
                 <a href="https://intcore.com" target="_blank">intcore.</a>
               </p>
             </div>
-            <div class="col-md-3 col-12 text-white order-2 px-2 text-center mb-4">
+            <div
+              class="col-md-3 col-12 text-white order-2 px-2 text-center mb-4"
+            >
               <a target="_blank" href=""
                 ><img
                   src="../Assets/Icons/Icon awesome-facebook.svg"
@@ -406,7 +412,7 @@
         $("#customers-testimonials").owlCarousel({
           loop: true,
           center: true,
-          items: 4,
+          items: 3,
           margin: 0,
           autoplay: true,
           dots: false,
@@ -633,7 +639,7 @@
                   <div class="${board.class} container-fluid">
                       <div class="container justify-content-center p-0 ">
                           <div class="row my-3 py-3">
-                              <div class="col-md-3 col-12 order-md-${
+                              <div class="col-lg-3 col-md-5 col-12 order-md-${
                                 isEven ? "0" : "1"
                               } order-1">
                                   <div class="card h-100 border-0 bg-transparent">
@@ -674,7 +680,7 @@
                                       </div>
                                   </div>
                               </div>
-                              <div class="col-md-9 col-12 order-md-${
+                              <div class="col-lg-9 col-md-7 col-12 order-md-${
                                 isEven ? "1" : "0"
                               } order-0">
                                   <img class="img-fluid w-100 h-100" src="../Assets/Photos/${
@@ -777,33 +783,15 @@
       function generateTestimonials(testimonials) {
         return testimonials
           .map(
-            (testimonial) => `
-    <div class="item">
-      <div class="bg-transparent text-center px-4"" mt-5 mb-0">
-        <div class="testimonial-text p-4 mx-auto shadow-effect">
-          <div class=" d-inline-block photo-shadow">
-            <img
-              class="img-fluid "
-              style="border-radius: 16px"
-              src="${testimonial.image}"
-              alt=""
-            />
-          </div>
-          <p class="fs-5 fw-bolder m-0 mt-3">${testimonial.name}</p>
-          <p class="fs-6 fw-lighter text-black-50 m-0">
-            From ${testimonial.company}
-          </p>
-          <p class="fs-6 fw-lighter text-black-50">-Company name-</p>
-          <p class="text-START fs-5 mt-5">
-            ${testimonial.shortTestimonial}
-          </p>
-          <p class="text-START fs-5 text-black-50">
-            ${testimonial.longTestimonial}
-          </p>
-        </div>
-      </div>
-    </div>
-  `
+            (testimonial) =>
+              `<div class="item text-center px-4 mt-5 mb-0 testimonial-text">
+                <img class="img-fluid icon" style="border-radius: 16px" src="${testimonial.image}" alt="" />
+                <p class="fs-5 fw-bolder m-0 mt-3">${testimonial.name}</p>
+                <p class="fs-6 fw-lighter text-black-50 m-0">From ${testimonial.company}</p>
+                <p class="fs-6 fw-lighter text-black-50">-Company name-</p>
+                <p class="text-START fs-5 mt-5 text-start mb-3">${testimonial.shortTestimonial}</p>
+                <p class="text-START fs-5 text-black-50 text-start pb-5 ">${testimonial.longTestimonial}</p>
+              </div>`
           )
           .join("");
       }

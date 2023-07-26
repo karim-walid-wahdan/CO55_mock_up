@@ -226,32 +226,31 @@ $font-family-base: "Visby CF", sans-serif;
 
     .owl-item {
         & {
-            .photo-shadow {
-                margin-top: -50px !important;
+            .icon {
+                margin-top: -100px !important;
                 padding: 5px;
                 background-color: #0025bb14;
                 max-width: 90px;
                 border-radius: 16px;
+                margin: auto;
             }
             .testimonial-text {
+                padding-top: 20%;
                 background-color: white;
                 border-radius: 16px;
                 box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
-                width: inherit;
+                width: 100%;
                 @media (max-width: 767px) {
                     width: 95%;
                 }
             }
             .item {
-                opacity: 1;
-                margin-bottom: 80px;
-                transform: scale3d(0.6, 0.6, 1);
+                transform: scale3d(0.8,0.8, 1);
                 transition: all 0.3s ease-in-out;
             }
         }
         &.active.center .item {
-            transform: scale3d(0.8, 0.8, 1);
-            opacity: 1;
+            transform: scale3d(1, 1, 1);
         }
     }
 }
