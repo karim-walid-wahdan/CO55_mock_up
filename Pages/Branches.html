@@ -69,7 +69,7 @@
     ---------------------------START Branches-----------------------------
     ------------------------------------------------------------------->
     <div class="container-fluid parent-bg pt-4">
-      <div class="container pb-5">
+      <div class="container branches pb-5">
         <div class="row d-flex justify-content-center">
           <div class="col-7 fw-light fs-1 text-center">
             <p class="m-0">
@@ -102,144 +102,12 @@
             />
           </div>
         </div>
-
-        <div
-          class="row d-flex branches-container justify-content-center align-items-center mt-3"
-        >
-          <div class="col-lg-3 col-md-5 col-12 px-3 pb-lg-0 pb-3">
-            <div
-              class="card rounded-0 bg-transparent border-0"
-              style="height: 70vh; max-height: 70vh"
-            >
-              <div class="card-header p-0" style="height: 50%">
-                <img
-                  src="../assets/photos/Fully-serviced Workspace.png"
-                  class="card-img-top rounded-0 img-fluid"
-                  alt="Card Image"
-                  style="height: 100%; width: 100%; object-fit: cover"
-                />
-              </div>
-
-              <div
-                class="card-body rounded-0 bg-transparent px-0"
-                style="height: 40%"
-              >
-                <p
-                  class="card-title rounded-0 fw-bolder m-0 bg-transparent fs-4"
-                >
-                  NASR CITY
-                </p>
-                <img
-                  src="../assets/icons/Union 12.svg"
-                  class="img-fluid m-0"
-                  width="90%"
-                  alt="..."
-                />
-                <p class="card-text overflow-hi">
-                  City Center Mall, Makram Ebeid Street, Nasr City Cairo, Cairo
-                  Governorate, Egypt.
-                </p>
-              </div>
-              <div class="card-footer p-0" style="height: 10%">
-                <a
-                  href="#"
-                  class="btn btn-primary w-100 rounded-0 text-white btn-hover"
-                  >Explore Branch</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-5 col-12 px-3 pb-lg-0 pb-3">
-            <div
-              class="card rounded-0 bg-transparent border-0"
-              style="height: 70vh; max-height: 70vh"
-            >
-              <div class="card-header p-0" style="height: 50%">
-                <img
-                  src="../assets/photos/Fully-serviced Workspace.png"
-                  class="card-img-top rounded-0 img-fluid"
-                  alt="Card Image"
-                  style="height: 100%; width: 100%; object-fit: cover"
-                />
-              </div>
-
-              <div
-                class="card-body rounded-0 bg-transparent px-0"
-                style="height: 40%"
-              >
-                <p
-                  class="card-title rounded-0 fw-bolder m-0 bg-transparent fs-4"
-                >
-                  New Cairo
-                </p>
-                <img
-                  src="../assets/icons/Union 12.svg"
-                  class="img-fluid m-0"
-                  width="90%"
-                  alt="..."
-                />
-                <p class="card-text overflow-hi">
-                  City Center Mall, Makram Ebeid Street, Nasr City Cairo, Cairo
-                  Governorate, Egypt.
-                </p>
-              </div>
-              <div class="card-footer p-0" style="height: 10%">
-                <a
-                  href="#"
-                  class="btn btn-primary w-100 rounded-0 text-white btn-hover"
-                  >Explore Branch</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-5 col-12 px-3">
-            <div
-              class="card rounded-0 bg-transparent border-0"
-              style="height: 70vh; max-height: 70vh"
-            >
-              <div class="card-header p-0" style="height: 50%">
-                <img
-                  src="../assets/photos/Fully-serviced Workspace.png"
-                  class="card-img-top rounded-0 img-fluid"
-                  alt="Card Image"
-                  style="height: 100%; width: 100%; object-fit: cover"
-                />
-              </div>
-
-              <div
-                class="card-body rounded-0 bg-transparent px-0"
-                style="height: 40%"
-              >
-                <p
-                  class="card-title rounded-0 fw-bolder m-0 bg-transparent fs-4"
-                >
-                  October
-                </p>
-                <img
-                  src="../assets/icons/Union 12.svg"
-                  class="img-fluid m-0"
-                  width="90%"
-                  alt="..."
-                />
-                <p class="card-text overflow-hi">Coming Soon .............</p>
-              </div>
-              <div class="card-footer p-0" style="height: 10%">
-                <a
-                  href="#"
-                  class="btn btn-primary w-100 rounded-0 text-white btn-hover"
-                  >Explore Branch</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
 
     <!------------------------------------------------------------------
     ---------------------------END Branches-----------------------------
     ------------------------------------------------------------------->
-
     <!------------------------------------------------------------------
     ---------------------------START Footer-----------------------------
     ------------------------------------------------------------------->
@@ -378,6 +246,60 @@
           link.classList.add("border-bottom");
         }
       });
+    </script>
+    <script>
+      const branches = [
+        {
+          name: "NASR CITY",
+          photo: "../assets/photos/Fully-serviced Workspace.png",
+          address:
+            "City Center Mall, Makram Ebeid Street, Nasr City Cairo, Cairo Governorate, Egypt.",
+        },
+        {
+          name: "New Cairo",
+          photo: "../assets/photos/Fully-serviced Workspace.png",
+          address:
+            "City Center Mall, Makram Ebeid Street, Nasr City Cairo, Cairo Governorate, Egypt.",
+        },
+        {
+          name: "October",
+          photo: "../assets/photos/Fully-serviced Workspace.png",
+          address: "Coming Soon .............",
+        },
+      ];
+    </script>
+    <script>
+      function generateBranchesHTML(branches) {
+        return `
+        <div class="row d-flex branches-container justify-content-center align-items-center mt-3">
+          ${branches
+            .map(
+              (branch) => `
+            <div class="col-lg-3 col-md-5 col-12 px-3 pb-lg-0 pb-3">
+              <div class="card rounded-0 bg-transparent border-0" style="height: 70vh; max-height: 70vh">
+                <div class="card-header p-0" style="height: 50%">
+                  <img src="${branch.photo}" class="card-img-top rounded-0 img-fluid" alt="Card Image" style="height: 100%; width: 100%; object-fit: cover"/>
+                </div>
+                <div class="card-body rounded-0 bg-transparent px-0" style="height: 40%">
+                  <p class="card-title rounded-0 fw-bolder m-0 bg-transparent fs-4">${branch.name}</p>
+                  <img src="../assets/icons/Union 12.svg" class="img-fluid m-0" width="90%" alt="..."/>
+                  <p class="card-text overflow-hi">${branch.address}</p>
+                </div>
+                <div class="card-footer p-0" style="height: 10%">
+                  <a href="#" class="btn btn-primary w-100 rounded-0 text-white btn-hover">Explore Branch</a>
+                </div>
+              </div>
+            </div>
+          `
+            )
+            .join("")}
+        
+  `;
+      }
+    </script>
+    <script>
+      document.querySelector(".branches").innerHTML +=
+        generateBranchesHTML(branches);
     </script>
   </body>
 </html>
