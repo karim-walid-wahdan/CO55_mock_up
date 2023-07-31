@@ -20,7 +20,7 @@
     <!------------------------------------------------------------------
     ---------------------------START NavBar-----------------------------
     ------------------------------------------------------------------->
-    <nav class="navbar navbar-expand-md navbar-dark bg-opacity-90 fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-opacity-90 fixed-top">
       <div class="container p-md-0">
         <a class="navbar-brand" href="Home.html">
           <img
@@ -59,7 +59,7 @@
               <a class="nav-link" href="AboutUs.html">About us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="Membership.html">Membership</a>
+              <a class="nav-link" href="MemberShip.html">Membership</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="Branches.html">Branches</a>
@@ -105,6 +105,7 @@
     <!------------------------------------------------------------------
     ---------------------------END ChatBox-----------------------------
     ------------------------------------------------------------------->
+
     <!------------------------------------------------------------------
     ---------------------------START Carsouel---------------------------
     ------------------------------------------------------------------->
@@ -137,10 +138,11 @@
     <!------------------------------------------------------------------
     ---------------------------END Carsouel-----------------------------
     ------------------------------------------------------------------->
+
     <!------------------------------------------------------------------
     ---------------------------START Services---------------------------
     ------------------------------------------------------------------->
-    <div class="services container mt-md-5 mt-4 mp-5">
+    <div class="services container-fluid mt-md-5 mt-4 mp-5 pb-5">
       <div class="title container justify-content-center pb-0 mb-0">
         <div class="row d-flex justify-content-center">
           <div class="col-7 fw-bolder display-5 text-center">
@@ -171,18 +173,26 @@
     <!------------------------------------------------------------------
     ---------------------------END Services---------------------------
     ------------------------------------------------------------------->
+
     <!------------------------------------------------------------------
     ---------------------------START QuickInfo--------------------------
     ------------------------------------------------------------------->
-    <div class="w-100">
-      <div class="quickinfo container-fluid mt-4 mt-md-5 mp-5">
+    <div class="w-100 py-5 quickinfo animate">
+      <div class="container-fluid mt-4 mt-md-5 mp-5">
         <div class="container p-0 pt-5">
           <div class="quickinfo-row row justify-content-center p-0 pt-5"></div>
         </div>
       </div>
     </div>
-    <div class="w-100">
-      <div class="container-fluid mt-5 mp-5">
+    <!------------------------------------------------------------------
+    ---------------------------END QuickInfo----------------------------
+    ------------------------------------------------------------------->
+
+    <!------------------------------------------------------------------
+    ---------------------------START Amenities--------------------------
+    ------------------------------------------------------------------->
+    <div class="w-100 py-5 parent-bg">
+      <div class="container-fluid mt-5">
         <div class="title container justify-content-center pb-0 mb-0">
           <div class="row d-flex justify-content-center">
             <div class="col-7 fw-bolder display-5 text-center">
@@ -208,20 +218,22 @@
               />
             </div>
           </div>
-          <div
-            class="row d-flex amenities-container justify-content-center align-items-center mt-5"
-          ></div>
         </div>
-        <div class="container amenities p-0"></div>
+      </div>
+      <div class="contanier-fluid">
+        <div
+          class="row d-flex amenities-container amenities justify-content-center align-items-center mt-5"
+        ></div>
       </div>
     </div>
     <!------------------------------------------------------------------
-    ---------------------------END QuickInfo---------------------------
+    ---------------------------END Amenities----------------------------
     ------------------------------------------------------------------->
+
     <!------------------------------------------------------------------
     ---------------------------START Testimonials-----------------------
     ------------------------------------------------------------------->
-    <div class="w-100 mb-5">
+    <div class="w-100 py-5">
       <div class="container-fluid bg-transparent mt-5">
         <div class="title container justify-content-center">
           <div class="row d-flex justify-content-center p-0">
@@ -265,6 +277,7 @@
     <!------------------------------------------------------------------
     ---------------------------END Testimonials-------------------------
     ------------------------------------------------------------------->
+
     <!------------------------------------------------------------------
     ---------------------------START Footer-----------------------------
     ------------------------------------------------------------------->
@@ -389,10 +402,11 @@
     <!------------------------------------------------------------------
     ---------------------------END Footer-------------------------------
     ------------------------------------------------------------------->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="../node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+    <script src="../node_modules/scrollreveal/dist/scrollreveal.min.js"></script>
     <script>
       var currentURI = window.location.pathname;
       var currentPath = currentURI.substring(currentURI.lastIndexOf("/") + 1);
@@ -437,6 +451,8 @@
           $(".chat-button").show();
         }
       });
+
+      console.log("aywa jena");
     </script>
     <!--DATA storing -->
     <script>
@@ -636,9 +652,11 @@
         Boards.forEach((board, index) => {
           const isEven = index % 2 === 0;
           const boardStruct = `
-                  <div class="${board.class} container-fluid">
-                      <div class="container justify-content-center p-0 ">
-                          <div class="row my-3 py-3">
+                  <div class="${board.class}  animate container-fluid ${
+            isEven ? "" : "parent-bg"
+          } ">
+                      <div class="container justify-content-center p-0">
+                          <div class="row py-3">
                               <div class="col-lg-3 col-md-5 col-12 order-md-${
                                 isEven ? "0" : "1"
                               } order-1">
@@ -699,7 +717,7 @@
       function generateQuickInfo(quickInfo) {
         const cards = quickInfo.map(
           (card) => `
-          <div class="col-md-4 col-12">
+          <div class="col-md-4 col-12 animate">
             <div class="card bg-transparent text-white">
               <img src="${card.imageSrc}" class="card-img-top rounded-0" alt="..." />
               <div class="card-body">
@@ -714,17 +732,17 @@
         return cards.join("");
       }
       function generateAmenities(amenities) {
-        return `<div class="row d-flex justify-content-center align-items-center mt-3">
+        return `<div class="row d-flex justify-content-center align-items-center mt-5">
                   ${amenities
                     .map(
                       (amenity) => `
-                    <div class="col-md-4 col-lg-2 col-5 amenities-card mt-3">
+                    <div class="col-md-4 col-lg-2 col-5 amenities-card mt-3 justify-content-around">
                       <div class="mx-auto">
-                        <img src="../Assets/Icons/${amenity.icon}" alt="${amenity.altText}" width="40" height="40" />
+                        <img src="../Assets/Icons/${amenity.icon}" alt="${amenity.altText}" style="height: 40px; max-height: 40px; width: 40px; max-width: 40px" class="img-fluid"/>
                       </div>
-                      <div class="rounded-pill icon-line my-2 mx-auto"></div>
-                      <p class="mb-0 text-center">${amenity.description}</p>
-                      <div class="rounded-pill text-line my-2 mx-auto"></div>
+                      <div class="rounded-pill icon-line mx-auto p-0"></div>
+                      <p class="mb-0 text-center p-0">${amenity.description}</p>
+                      <div class="rounded-pill text-line mx-auto p-0"></div>
                     </div>
                   `
                     )
@@ -749,7 +767,7 @@
         const items = slides
           .map(
             (slide, index) => `
-    <div class="carousel-item ${
+    <div class="carousel-item   ${
       index === 0 ? "active" : ""
     }" data-bs-interval="3000">
       <img
@@ -807,6 +825,13 @@
         generateCarouselSlides(slides);
       document.querySelector(".owl-carousel").innerHTML +=
         generateTestimonials(testimonials);
+      ScrollReveal().reveal(".animate", {
+        origin: "right",
+        distance: "100px",
+        duration: 2500,
+        reset: false,
+      
+      });
     </script>
   </body>
 </html>
